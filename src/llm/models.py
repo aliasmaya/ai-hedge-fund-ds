@@ -76,6 +76,16 @@ AVAILABLE_MODELS = [
         model_name="o3-mini",
         provider=ModelProvider.OPENAI
     ),
+    LLMModel(
+        display_name="[openai] deepseek-r1:7b",
+        model_name="deepseek-r1:7b",
+        provider=ModelProvider.OPENAI
+    ),
+    LLMModel(
+        display_name="[openai] deepseek-r1:14b",
+        model_name="deepseek-r1:14b",
+        provider=ModelProvider.OPENAI
+    ),
 ]
 
 # Create LLM_ORDER in the format expected by the UI
