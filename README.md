@@ -47,13 +47,13 @@ By using this software, you agree to use it solely for learning purposes.
 
 Clone the repository:
 ```bash
-git clone https://github.com/virattt/ai-hedge-fund.git
+git clone https://github.com/aliasmaya/ai-hedge-fund-ds.git
 cd ai-hedge-fund
 ```
 
 1. Install Poetry (if not already installed):
 ```bash
-curl -sSL https://install.python-poetry.org | python3 -
+curl -sSL https://install.python-poetry.org | python -
 ```
 
 2. Install dependencies:
@@ -69,6 +69,9 @@ cp .env.example .env
 
 4. Set your API keys:
 ```bash
+# Can be your local deployed DeepSeek on Ollama, share the sample protocol in OpenAI
+OPENAI_BASE_URL=http://host.docker.internal:11434/v1
+
 # For running LLMs hosted by openai (gpt-4o, gpt-4o-mini, etc.)
 # Get your OpenAI API key from https://platform.openai.com/
 OPENAI_API_KEY=your-openai-api-key
@@ -126,7 +129,7 @@ poetry run python src/backtester.py --ticker AAPL,MSFT,NVDA --start-date 2024-01
 
 ## Project Structure 
 ```
-ai-hedge-fund/
+ai-hedge-fund-ds/
 ├── src/
 │   ├── agents/                   # Agent definitions and workflow
 │   │   ├── bill_ackman.py        # Bill Ackman agent
